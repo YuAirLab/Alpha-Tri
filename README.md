@@ -49,5 +49,5 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
     python main.py workspace_dir --xic (post-scoring only by Alpha-XIC)
     python main.py workspace_dir --tri --xic (post-scoring by Alpha-Tri & Alpha-XIC)
     ```
-    Finally, we get the identification and quantitative result —— alpha_out.tsv.  
+    Finally, we get the identification and quantitative result, alpha_out.tsv, in the workspace folder.
     
