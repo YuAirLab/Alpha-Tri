@@ -26,12 +26,12 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
     - HeLa-1h.mzML, (test data could be downloaded from [figshare](https://figshare.com/projects/Alpha-Tri/128000) 
     or [PXD005573](https://www.ebi.ac.uk/pride/archive/projects/PXD005573))
     - lib.tsv (this spectral library could be downloaded from [figshare](https://figshare.com/projects/Alpha-Tri/128000)
-    or [Pan-Human library](https://db.systemsbiology.net/sbeams/cgi/PeptideAtlas/GetDIALibs))
+    or [Pan-Human library, SAL00023](https://db.systemsbiology.net/sbeams/cgi/PeptideAtlas/GetDIALibs))
    
 3. Run Prosit to predict the MS2 for each precursor in lib
     ```shell script
     cd Alpha-Tri/Prosit
-    python prosit --lib wsorkspace_dir/lib.tsv
+    python prosit.py --lib wsorkspace_dir/lib.tsv
     ``` 
     This will append the predicted MS2 to each precursor and store the result to lib.pkl.
     
@@ -50,3 +50,4 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
     python main.py workspace_dir --tri --xic (post-scoring by Alpha-Tri & Alpha-XIC)
     ```
     Finally, we get the identification and quantitative result —— alpha_out.tsv.  
+    
