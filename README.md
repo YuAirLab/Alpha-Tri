@@ -13,7 +13,7 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
 - [Prosit](https://github.com/kusterlab/prosit)
 - [tensorflow](https://www.tensorflow.org/install)
 
-## Example on a local PC (win10, NVIDIA GTX 1060)
+## Example on a local PC (win10, NVIDIA GPU 1060)
 
 1. Compile the modified DIA-NN: 
     ```shell script
@@ -33,9 +33,10 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
     ```shell script
     conda create -n alpha python=3.6 numpy=1.18 pandas=1.0 numba scikit-learn --yes
     conda activate alpha 
-    conda install -c bioconda pyteomics --yes
+    conda install -c bioconda pyteomics python=3.6 --yes
     conda install tensorflow-gpu=1.11 keras=2.2.4 pytorch=1.1.0 cudatoolkit=9.0 -c pytorch --yes
     ```
+    Of note, as Prosit is trained by tf1.11, advanced version of tf and CUDA may not be compatible. 
     
 4. Run Prosit to predict the MS2 for each precursor in lib
     ```shell script
@@ -61,4 +62,8 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
     python main.py -ws workspace_dir --tri --xic (post-scoring by Alpha-Tri & Alpha-XIC)
     ```
     Finally, we get the identification and quantitative result, alpha_out.tsv, in the workspace folder.
+
+## Example on Google Colab Pro (linux, NVIDIA GPU P100)
+see [alpha_tri_on_Colab.ipynb](https://github.com/YuAirLab/Alpha-Tri/blob/master/alpha_tri_on_Colab.ipynb)
+
     
