@@ -66,4 +66,22 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
 ## Example on Google Colab Pro (linux, NVIDIA GPU P100)
 see [alpha_tri_on_Colab.ipynb](https://github.com/YuAirLab/Alpha-Tri/blob/master/alpha_tri_on_Colab.ipynb)
 
+## Troubleshooting
+```shell script
+1. AttributeError: 'str' object has no attribute 'decode'
+```
+
+```shell script
+2. TypeError: add_weight() got multiple values for argument 'name'
+```
+
+These may be raised by the version incompatibility of Keras in Prosit. You may have to install the same version of Keras: 
+```shell script
+conda install tensorflow-gpu=1.11 keras=2.2.4 pytorch=1.1.0 cudatoolkit=9.0 -c pytorch --yes
+```
+
+
+
+
+    
     
