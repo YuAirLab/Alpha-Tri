@@ -75,7 +75,7 @@ see [alpha_tri_on_Colab.ipynb](https://github.com/YuAirLab/Alpha-Tri/blob/master
 2. TypeError: add_weight() got multiple values for argument 'name'
 ```
 
-These may be raised by the version incompatibility of Keras in Prosit. You may have to install the same version of Keras: 
+These may be raised by the version incompatibility of Keras in Prosit (see the discussions in [https://github.com/keras-team/keras/issues/14265](https://github.com/keras-team/keras/issues/14265) and [https://github.com/keras-team/keras/issues/13540](https://github.com/keras-team/keras/issues/13540)). You may have to install the same version of Keras: 
 ```shell script
 conda install tensorflow-gpu=1.11 keras=2.2.4 pytorch=1.1.0 cudatoolkit=9.0 -c pytorch --yes
 ```
