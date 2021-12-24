@@ -13,7 +13,7 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
 - [Prosit](https://github.com/kusterlab/prosit)
 - [tensorflow](https://www.tensorflow.org/install)
 
-## Example on local PC (win10, NVIDIA GTX 1060)
+## Example on a local PC (win10, NVIDIA GTX 1060)
 
 1. Compile the modified DIA-NN: 
     ```shell script
@@ -31,9 +31,9 @@ A [GPU with CUDA support](https://developer.nvidia.com/cuda-gpus)
 
 3. Configure the operating environment by conda 
     ```shell script
-    conda create -n alpha python=3.6 numpy=1.18 pandas=1.0 numba scikit-learn 
+    conda create -n alpha python=3.6 numpy=1.18 pandas=1.0 numba scikit-learn --yes
     conda activate alpha 
-    conda install -c bioconda pyteomics
+    conda install -c bioconda pyteomics --yes
     conda install tensorflow-gpu=1.11 keras=2.2.4 pytorch=1.1.0 cudatoolkit=9.0 -c pytorch --yes
     ```
     
